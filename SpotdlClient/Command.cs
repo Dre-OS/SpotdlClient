@@ -6,25 +6,25 @@ using System.Threading.Tasks;
 
 namespace SpotdlClient
 {
-    class Domain
+    class Command
     {
         private string Link = "";
-        public Domain()
+        public Command()
         {
                 
         }
-        public Domain(string link)
+        public Command(string link)
         {
             this.Link = link;
         }
 
-        static Domain Clean(string link)
+        public string Clean(string link)
         {
+            //Cleans the link of any trackers
             char[] linkchar = link.ToCharArray();
             for (int i = 0; i < linkchar.Length; i++)
             {
 
-                
             }
             link = linkchar.ToString();
             return link;

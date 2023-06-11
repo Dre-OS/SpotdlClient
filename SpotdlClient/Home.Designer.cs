@@ -1,7 +1,7 @@
 ﻿
 namespace SpotdlClient
 {
-    partial class SpotDLClient
+    partial class Home
     {
         /// <summary>
         /// Required designer variable.
@@ -29,17 +29,17 @@ namespace SpotdlClient
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SpotDLClient));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.setFileDestinationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.setFileDestinationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -50,12 +50,13 @@ namespace SpotdlClient
             this.textBox1.BackColor = System.Drawing.Color.Gray;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.Silver;
+            this.textBox1.ForeColor = System.Drawing.SystemColors.Control;
             this.textBox1.Location = new System.Drawing.Point(12, 278);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(338, 19);
             this.textBox1.TabIndex = 0;
             this.textBox1.Text = "-----> Enter link ";
+            this.textBox1.Click += new System.EventHandler(this.textBox1_Click);
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // pictureBox1
@@ -69,7 +70,6 @@ namespace SpotdlClient
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // menuStrip1
             // 
@@ -90,6 +90,14 @@ namespace SpotdlClient
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(37, 20);
             this.toolStripMenuItem1.Text = "File";
+            // 
+            // setFileDestinationToolStripMenuItem
+            // 
+            this.setFileDestinationToolStripMenuItem.BackColor = System.Drawing.SystemColors.Control;
+            this.setFileDestinationToolStripMenuItem.Name = "setFileDestinationToolStripMenuItem";
+            this.setFileDestinationToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.setFileDestinationToolStripMenuItem.Text = "Set file destination";
+            this.setFileDestinationToolStripMenuItem.Click += new System.EventHandler(this.filedest_Click);
             // 
             // statusStrip1
             // 
@@ -133,7 +141,7 @@ namespace SpotdlClient
             this.button1.TabIndex = 6;
             this.button1.Text = "Start";
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.Start_Click);
             // 
             // button2
             // 
@@ -148,16 +156,9 @@ namespace SpotdlClient
             this.button2.TabIndex = 7;
             this.button2.Text = "Options";
             this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.Options_Click);
             // 
-            // setFileDestinationToolStripMenuItem
-            // 
-            this.setFileDestinationToolStripMenuItem.BackColor = System.Drawing.SystemColors.Control;
-            this.setFileDestinationToolStripMenuItem.Name = "setFileDestinationToolStripMenuItem";
-            this.setFileDestinationToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.setFileDestinationToolStripMenuItem.Text = "Set file destination";
-            // 
-            // SpotDLClient
+            // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -174,7 +175,7 @@ namespace SpotdlClient
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
-            this.Name = "SpotDLClient";
+            this.Name = "Home";
             this.Text = "SpotDLClient";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
