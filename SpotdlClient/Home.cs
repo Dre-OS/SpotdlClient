@@ -16,22 +16,18 @@ namespace SpotdlClient
         {
             InitializeComponent();
         }
+        
         private void Start_Click(object sender, EventArgs e)
         {
             //starts py script operation 
             string strCmdText = textBox1.Text;
-            var domain = new Command(strCmdText);
+            var command = new Command(strCmdText);
             System.Diagnostics.Process.Start("CMD.exe", "cd domain");
         }
         private void Options_Click(object sender, EventArgs e)
         {
 
         }
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
         private void textBox1_Click(object sender, EventArgs e)
         {
             textBox1.ResetText();
@@ -39,25 +35,29 @@ namespace SpotdlClient
 
         private void filedest_Click(object sender, EventArgs e)
         {
-            //find a path to be used as download location
-            var fbd = new FolderBrowserDialog();
-            string folder;
-            DialogResult result = fbd.ShowDialog();
-            if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(fbd.SelectedPath))
-            {
-                folder = fbd.SelectedPath;
-            }
+            //click event to trigger DestinationAssign()
+            File filedest = new File();
+            filedest.DestinationAssign();
         }
-        //static string Clean(string link)
-        //{
-        //    char[] linkchar = link.ToCharArray();
-        //    for (int i = 0; i < linkchar.Length; i++)
-        //    {
 
+        private void Home_Load(object sender, EventArgs e)
+        {
+            //load event to trigger DestNull()
+            DestNull();
+        }
+        private void DestNull()
+        {
+            //if file destination is null, assign file destination
+            File filedest = new File();
+            if (filedest.Destination() == null)
+            {
+                DialogResult result = MessageBox.Show("file Destination not entered");
+                if (result == DialogResult.OK)
+                {
+                    filedest.DestinationAssign();
+                }
+            }
 
-        //    }
-        //    link = linkchar.ToString();
-        //    return link;
-        //}
+        }
     }
 }
