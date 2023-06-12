@@ -55,9 +55,9 @@ namespace SpotdlClient
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(338, 19);
             this.textBox1.TabIndex = 0;
-            this.textBox1.Text = "-----> Enter link ";
+            this.textBox1.Text = "Enter link";
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox1.Click += new System.EventHandler(this.textBox1_Click);
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // pictureBox1
             // 
@@ -95,7 +95,7 @@ namespace SpotdlClient
             // 
             this.setFileDestinationToolStripMenuItem.BackColor = System.Drawing.SystemColors.Control;
             this.setFileDestinationToolStripMenuItem.Name = "setFileDestinationToolStripMenuItem";
-            this.setFileDestinationToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.setFileDestinationToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.setFileDestinationToolStripMenuItem.Text = "Set file destination";
             this.setFileDestinationToolStripMenuItem.Click += new System.EventHandler(this.filedest_Click);
             // 
@@ -177,6 +177,7 @@ namespace SpotdlClient
             this.MaximizeBox = false;
             this.Name = "Home";
             this.Text = "SpotDLClient";
+            this.Load += new System.EventHandler(this.Home_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
