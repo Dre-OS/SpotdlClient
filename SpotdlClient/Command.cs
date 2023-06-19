@@ -21,19 +21,14 @@ namespace SpotdlClient
         public string CleanLink(string link)
         {
             //Cleans the link of any trackers
-            int i = 0;
-            char[] linkchar = link.ToCharArray();
-            do
-            {
-                if (!(linkchar[i].Equals("?")))
-                {
-                    i++;
-                }
-            } while (!(linkchar[i].Equals("?")));
-            
-            link = linkchar.ToString();
-            return link;
+            int index = link.IndexOf('?');
+            string cleanlink = link.Substring(0, index);
+            return cleanlink;
         }
+        //public string CommandConcat()
+        //{
+
+        //}
 
     }
 }
