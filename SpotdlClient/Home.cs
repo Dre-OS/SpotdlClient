@@ -20,9 +20,11 @@ namespace SpotdlClient
         private void Start_Click(object sender, EventArgs e)
         {
             //starts py script operation 
-            string strCmdText = textBox1.Text;
-            var command = new Command(strCmdText);
-            System.Diagnostics.Process.Start("CMD.exe", "cd domain");
+            string link = textBox1.Text;
+            var command = new Command();
+            //string cleanlink = command.CleanLink(link);
+            //MessageBox.Show(cleanlink);
+            //System.Diagnostics.Process.Start("CMD.exe", "cd domain");
         }
         private void Options_Click(object sender, EventArgs e)
         {

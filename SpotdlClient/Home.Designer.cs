@@ -40,6 +40,7 @@ namespace SpotdlClient
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -64,7 +65,7 @@ namespace SpotdlClient
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox1.Image = global::SpotdlClient.Properties.Resources.spotdl_5dcb64c0_;
-            this.pictureBox1.Location = new System.Drawing.Point(97, 40);
+            this.pictureBox1.Location = new System.Drawing.Point(101, 43);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(150, 150);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -95,7 +96,7 @@ namespace SpotdlClient
             // 
             this.setFileDestinationToolStripMenuItem.BackColor = System.Drawing.SystemColors.Control;
             this.setFileDestinationToolStripMenuItem.Name = "setFileDestinationToolStripMenuItem";
-            this.setFileDestinationToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.setFileDestinationToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.setFileDestinationToolStripMenuItem.Text = "Set file destination";
             this.setFileDestinationToolStripMenuItem.Click += new System.EventHandler(this.filedest_Click);
             // 
@@ -103,7 +104,8 @@ namespace SpotdlClient
             // 
             this.statusStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel1});
+            this.toolStripStatusLabel1,
+            this.toolStripProgressBar1});
             this.statusStrip1.Location = new System.Drawing.Point(0, 435);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(362, 22);
@@ -120,9 +122,9 @@ namespace SpotdlClient
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 27.7F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(98, 207);
+            this.label1.Location = new System.Drawing.Point(101, 206);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(149, 50);
             this.label1.TabIndex = 4;
@@ -157,6 +159,12 @@ namespace SpotdlClient
             this.button2.Text = "Options";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.Options_Click);
+            // 
+            // toolStripProgressBar1
+            // 
+            this.toolStripProgressBar1.Name = "toolStripProgressBar1";
+            this.toolStripProgressBar1.Size = new System.Drawing.Size(100, 16);
+            this.toolStripProgressBar1.Visible = false;
             // 
             // Home
             // 
@@ -200,6 +208,7 @@ namespace SpotdlClient
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ToolStripMenuItem setFileDestinationToolStripMenuItem;
+        private System.Windows.Forms.ToolStripProgressBar toolStripProgressBar1;
     }
 }
 
