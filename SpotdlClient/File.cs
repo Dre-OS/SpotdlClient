@@ -18,7 +18,7 @@ namespace SpotdlClient
         {
             this.Folder = folder;
         }
-        //return folder location
+        //return folder
         public string Destination()
         {
             return this.Folder;
